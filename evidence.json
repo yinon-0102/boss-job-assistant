@@ -1,0 +1,30 @@
+{
+  "agent": {
+    "resumeLabel": "Agent 开发版",
+    "searchKeywords": ["Agent 开发", "AI Agent 实习", "AI Workflow", "智能体开发"],
+    "signals": ["工具编排", "工具调用", "工具调度", "任务规划", "多步执行", "执行验收", "上下文预算", "上下文调度", "轨迹评测", "跨会话记忆", "agent runtime"],
+    "evidence": [
+      { "id": "sample-tools", "project": "示例工作流助手", "signals": ["工具编排", "工具调用", "工具调度"], "focus": "工具调用调度", "claim": "我做过一个工作流助手原型，为日程查询和邮件草拟设计了独立的工具接口" },
+      { "id": "sample-verify", "project": "示例工作流助手", "signals": ["执行验收", "任务规划", "多步执行", "轨迹评测", "agent runtime"], "focus": "多步任务的执行和验收", "claim": "我做过一个工作流助手原型，用模拟输入测试任务执行结果是否符合预期" },
+      { "id": "sample-context", "project": "示例工作流助手", "signals": ["上下文预算", "上下文调度", "跨会话记忆"], "focus": "上下文与记忆管理", "claim": "我在一个工作流助手原型里做过历史消息裁剪，并为会话摘要保留固定的上下文预算" }
+    ]
+  },
+  "ai-app": {
+    "resumeLabel": "AI 应用开发版",
+    "searchKeywords": ["AI 应用开发", "大模型应用", "RAG 应用", "知识库开发"],
+    "signals": ["rag", "多模态", "混合检索", "知识库", "业务问答", "答案溯源", "应用集成", "接口集成", "fastapi", "流式接口", "答案评测"],
+    "evidence": [
+      { "id": "sample-rag", "project": "示例校园问答", "signals": ["rag", "多模态", "混合检索", "知识库", "业务问答", "答案溯源", "答案评测"], "focus": "知识库检索与问答", "claim": "我做过一个校园问答原型，把常见问题整理进知识库，并在回答里附上来源段落" },
+      { "id": "sample-api", "project": "示例校园问答", "signals": ["应用集成", "接口集成", "fastapi", "流式接口"], "focus": "AI 应用的接口集成", "claim": "我为一个校园问答原型设计过查询接口，并处理超时和空结果" }
+    ]
+  },
+  "fde": {
+    "resumeLabel": "FDE 版",
+    "searchKeywords": ["FDE", "Forward Deployed Engineer", "AI 解决方案实习", "大模型技术交付"],
+    "customerSignals": ["客户", "驻场", "甲方"],
+    "signals": ["poc", "技术原型", "系统接入", "系统集成", "接口对接", "部署", "交付验收", "技术验收"],
+    "evidence": [
+      { "id": "sample-integration", "project": "示例目录集成", "signals": ["poc", "技术原型", "系统接入", "系统集成", "接口对接", "部署", "交付验收", "技术验收"], "focus": "技术原型、系统接入与验收", "claim": "我做过一个目录查询原型，用模拟接口验证了字段映射、超时处理和查询结果" }
+    ]
+  }
+}

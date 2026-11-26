@@ -1,0 +1,17 @@
+{
+  "profile": { "desiredTitle": "后端开发", "keywords": ["AI Workflow", "RAG 应用"] },
+  "preferences": {
+    "cities": ["上海", "深圳"],
+    "directions": ["agent", "ai-app", "fde"],
+    "internshipOnly": true,
+    "availableDaysPerWeek": 5,
+    "availableMonths": 3
+  },
+  "jobs": [
+    { "id": "demo-1", "company": "模拟公司甲", "title": "AI Agentic 实习", "city": "上海", "employment": "internship", "minDaysPerWeek": 5, "minMonths": 3, "jd": "负责 Agent 工具编排、执行验收和轨迹评测。" },
+    { "id": "demo-2", "company": "模拟公司乙", "title": "大模型应用开发实习", "city": "深圳", "employment": "internship", "minDaysPerWeek": 4, "minMonths": 3, "jd": "搭建多模态 RAG 知识库，做混合检索、业务问答和接口集成。" },
+    { "id": "demo-3", "company": "模拟公司丙", "title": "AI 解决方案实习", "city": "上海", "employment": "internship", "minDaysPerWeek": 5, "minMonths": 3, "jd": "面向客户做技术原型 PoC、系统接入和交付验收。" },
+    { "id": "demo-4", "company": "模拟公司丁", "title": "AI 产品助理实习", "city": "深圳", "employment": "internship", "minDaysPerWeek": 5, "minMonths": 3, "jd": "负责 Agent 产品的 PRD、产品原型和需求跟进。" },
+    { "id": "demo-5", "company": "模拟公司戊", "title": "智能体开发实习", "city": "深圳", "employment": "internship", "minDaysPerWeek": null, "minMonths": 3, "jd": "负责工具编排、上下文预算。" }
+  ]
+}

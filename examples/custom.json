@@ -1,0 +1,22 @@
+{
+  "profile": { "desiredTitle": "后端开发", "keywords": ["AI Workflow"] },
+  "preferences": {
+    "cities": ["杭州"],
+    "directions": ["agent", "ai-app"],
+    "internshipOnly": true,
+    "availableDaysPerWeek": 4,
+    "availableMonths": 4
+  },
+  "jobs": [
+    {
+      "id": "custom-1",
+      "company": "模拟公司己",
+      "title": "AI 开发实习生",
+      "city": "杭州",
+      "employment": "internship",
+      "minDaysPerWeek": 4,
+      "minMonths": 3,
+      "jd": "开发 Agent 工具调用和工具调度模块，维护执行日志。"
+    }
+  ]
+}
