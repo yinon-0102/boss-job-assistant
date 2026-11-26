@@ -1,8 +1,14 @@
 # BOSS 实习投递助手
 
-用手动输入的主页线索、求职条件和模拟 JD，测试“关键词建议 → 岗位筛选 → JD 对应的招呼语 → 简历版本推荐”。只依赖本地 Node.js（在 v24 上验证），无需安装依赖，不联网、不需要服务器，也不需要配置 MCP。
+在已登录的 BOSS 直聘账号中，按求职条件筛选实习，并根据岗位 JD 和站内简历撰写个性化招呼语。离线预览使用模拟数据，只需本地 Node.js（在 v24 上验证）。
 
 桌面模式使用已接入 Windows Computer Use MCP 的 Skill 宿主。项目与 BOSS 直聘无隶属关系。
+
+## 在 BOSS 直聘使用
+
+在浏览器登录 BOSS 直聘，在 Codex 中调用 `$boss-job-assistant`，提供意向城市、岗位方向、薪资区间及计薪单位、出勤和实习时长，并说明要预览、填写还是发送招呼语。
+
+Skill 先在账号内查看个人资料、求职期望和三份简历正文，再筛选岗位。草稿只引用所选站内简历中与 JD 直接相关的经历。发送消息和发送简历附件分别按用户授权执行。详细步骤见 [SKILL.md](SKILL.md)。
 
 ## 桌面模式试跑
 
@@ -56,7 +62,7 @@ node --test .\tests\preview.test.mjs
 - `review`：关键信息缺失、职责难区分或缺少对应证据；不给草稿和简历版本。
 - `skip`：已沟通、批内重复、条件冲突或不在目标方向；给出原因。
 
-草稿基于 `evidence.json` 的虚构项目和固定句式，不调用模型。试用时请不要把示例经历当成自己的经历；实际使用前，应在本地用核实过的项目事实替换示例。请勿将个人简历或本地输入提交到公开仓库。`attachmentStatus: unverified` 表示未指定、读取或核验实际 PDF。命令没有发送或投递选项，`contactActionsPerformed` 为 `0`。
+离线草稿基于 `evidence.json` 的虚构项目和固定句式，由脚本生成。`attachmentStatus: unverified` 表示缺少实际附件的核验记录，`contactActionsPerformed` 为 `0`。
 
 ## 许可证
 
