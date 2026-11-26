@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOSS Assistant Desktop Fixture</title>
+<style>
+body {font: 18px/1.5 system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem}
+textarea, select, button {font: inherit; display: block; margin: .4rem 0 1rem}
+textarea {width: 95%; min-height: 4rem}
+output {display: block; white-space: pre-wrap}
+</style>
+<h1>模拟岗位详情</h1>
+<p>岗位编号 GUI-27 · 示例招聘团队 · 杭州 · 实习</p>
+<h2>智能应用研发实习生</h2>
+<p>每周至少 4 天，连续 3 个月。职责是开发知识库问答和混合检索，给 RAG 回答标注来源。</p>
+<form>
+  <label>打招呼草稿<textarea required></textarea></label>
+  <label>示例简历版本<select required><option value="">请选择</option><option>Agent 开发版</option><option>AI 应用开发版</option><option>FDE 版</option></select></label>
+  <button>模拟投递</button>
+</form>
+<output aria-live="polite"></output>
+<script>
+const form = document.querySelector('form');
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  const greeting = form.querySelector('textarea').value;
+  const resume = form.querySelector('select').value;
+  document.querySelector('output').textContent = ['模拟回执 GUI-27', resume, greeting].join('\n');
+});
+</script>
+</html>
