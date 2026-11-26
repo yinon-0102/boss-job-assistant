@@ -2,7 +2,16 @@
 
 在已登录的 BOSS 直聘账号中，按求职条件筛选实习，并根据岗位 JD 和站内简历撰写个性化招呼语。离线预览使用模拟数据，只需本地 Node.js（在 v24 上验证）。
 
-桌面模式使用已接入 Windows Computer Use MCP 的 Skill 宿主。项目与 BOSS 直聘无隶属关系。
+项目与 BOSS 直聘无隶属关系。
+
+## 是否需要安装 Computer Use MCP
+
+| 使用方式 | 本机需要什么 |
+| --- | --- |
+| 在终端运行 `node preview.mjs --demo` | Node.js 即可，无需 Computer Use MCP。 |
+| 操作 BOSS 网页或浏览器里的本地模拟页 | Codex 需要接入 Windows Computer Use MCP。当前会话已能调用 `computer_use` 的 `start_task`、`screenshot` 和 `batch` 时，可以直接使用。 |
+
+克隆本仓库会下载 skill 和配套脚本。新电脑或尚未接入 Computer Use MCP 的 Codex 环境，需要另外安装 MCP 服务并将它接入 Codex。`desktop.mjs` 负责生成调用参数，实际截图和点击由 MCP 执行。接入后，在新的 Codex 会话中核对上述工具是否可用。[Computer Use MCP 安装说明](https://github.com/cenglin123/computer-use-mcp/blob/master/INSTALL.md) · [Codex MCP 配置](https://developers.openai.com/codex/mcp)
 
 ## 在 BOSS 直聘使用
 
